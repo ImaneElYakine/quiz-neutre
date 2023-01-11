@@ -138,7 +138,7 @@ function runTimer() {
     timer = window.setTimeout(function () {
         reponseFausseAffichage();
         cartes[currentQuestion].classList.add('disapear');
-        
+        cartes[currentQuestion].style.display = "none";
         questionSuivante();
         setTimeout(runTimer, 1500);
     }, 6000);
@@ -172,7 +172,7 @@ function affichageFinJeu() {
 // VIA LES BOUTONS
 function choixBouton(choix) {
     cartes[currentQuestion].classList.add('profile--match');
-
+    cartes[currentQuestion].style.display = "none";
     stopTimer();
     choixUtilisateur = true;
     verificationReponse(choix);
