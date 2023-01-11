@@ -14,7 +14,7 @@ module.exports = {
                 'mediametrie': ['Mediametrie', 'sans-serif'],
             },
             backgroundImage: {
-                'background': "url('img/background.svg')",
+                'background': "url('/img/background.svg')",
             },
             keyframes: {
                 slide: {
