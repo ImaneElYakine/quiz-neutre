@@ -1,0 +1,103 @@
+.progress {
+    -webkit-animation:  7s linear ;
+    animation:  7s linear ;
+}
+
+@-webkit-keyframes progress {
+    0% {
+        width: 1%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes progress {
+    0% {
+        width: 1%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.slide-in-left {
+    -webkit-animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-in-right {
+    -webkit-animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-50%, -30%);
+        transform: translate(-50%, -30%);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-50%, -30%);
+        transform: translate(-50%, -30%);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        -webkit-transform: translate(-50%, 55%);
+        transform: translate(-50%, 55%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-50%, -70%);
+        transform: translate(-50%, -70%);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translate(-50%, 55%);
+        transform: translate(-50%, 55%);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translate(-50%, -70%);
+        transform: translate(-50%, -70%);
+        opacity: 1;
+    }
+}
+
+.zoom {
+    -webkit-animation: zoom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: zoom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes zoom {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes zoom {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
