@@ -797,10 +797,6 @@ video {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
-.bg-background {
-  background-image: url('img/background.svg');
-}
-
 .bg-cover {
   background-size: cover;
 }
@@ -1147,6 +1143,15 @@ video {
   transform: translate(-50%, -50%);
   color: #E65F28;
   z-index: 99999;
+}
+
+#reponse_bonne, #reponse_fausse {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
 /* Affichage mobile */
