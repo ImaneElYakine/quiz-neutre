@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Quiz Médiamétrie</title>
+    <link href="img/favicon-mediametrie.png" rel="icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="css/output.css">
+
+</head>
+<body class="bg-background bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie">
+
+<!-- Compte à rebours -->
+<div class="grid h-screen place-items-center text-white font-black text-9xl">
+    <div class="" id="compte_rebours_3">3</div>
+    <div class="hidden" id="compte_rebours_2">2</div>
+    <div class="hidden" id="compte_rebours_1">1</div>
+    <div class="hidden" id="compte_rebours_go">GO !</div>
+</div>
+
+<script>
+    setTimeout(function (){
+        document.getElementById("compte_rebours_3").classList.add("hidden");
+        document.getElementById("compte_rebours_2").classList.remove("hidden");
+        setTimeout(function (){
+            document.getElementById("compte_rebours_2").classList.add("hidden");
+            document.getElementById("compte_rebours_1").classList.remove("hidden");
+            setTimeout(function (){
+                document.getElementById("compte_rebours_1").classList.add("hidden");
+                document.getElementById("compte_rebours_go").classList.remove("hidden");
+                setTimeout(function (){
+                    document.getElementById("compte_rebours_go").classList.add("hidden");
+                    window.location.href = 'quiz.html';
+                },1300);
+            },1300);
+        },1300);
+    }, 1300);
+</script>
+</body>
+</html>

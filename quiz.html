@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Quiz</title>
+    <link href="img/favicon-mediametrie.png" rel="icon"/>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="bg-background bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie">
+<main>
+    <!-- Animation réponses -->
+    <div id="reponse_fausse" class="hidden modal bg-transparent flex">
+        <div class="m-auto ">
+            <p class="font-black text-reponse text-rouge">RATÉ</p>
+        </div>
+    </div>
+
+    <div id="reponse_bonne" class="hidden modal bg-transparent flex">
+        <div class="m-auto ">
+            <p class="font-black text-reponse text-vert">BIEN JOUÉ</p>
+        </div>
+    </div>
+
+    <!-- Bar de progrès -->
+    <div class="progress" id="progress">
+        <div class="bar" id="progress_bar"></div>
+    </div>
+
+    <!-- Encart questions -->
+    <div class="questions">
+        <div class="question">
+            <div class="question__encart"></div>
+            <div class="question__infos blur">
+                <div class="question__theme"></div>
+                <div class="question__description"></div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="question__encart"></div>
+            <div class="question__infos blur">
+                <div class="question__theme"></div>
+                <div class="question__description"></div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="question__encart"></div>
+            <div class="question__infos blur">
+                <div class="question__theme"></div>
+                <div class="question__description"></div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="question__encart"></div>
+            <div class="question__infos blur">
+                <div class="question__theme"></div>
+                <div class="question__description"></div>
+            </div>
+        </div>
+        <div class="question">
+            <div class="question__encart"></div>
+            <div class="question__infos ">
+                <div class="question__theme"></div>
+                <div class="question__description"></div>
+            </div>
+        </div>
+    </div>
+    <div class="bottombar">
+        <div class="bottombar__button">
+            <img src="img/picto-faux.svg" onclick="choixBouton(false);" alt="">
+        </div>
+        <div class="bottombar__button">
+            <img src="img/picto-vrai.svg" onclick="choixBouton(true);" alt="">
+        </div>
+    </div>
+</main>
+<script src='js/hammer.min.js'></script>
+<script src='js/main.js'></script>
+<script src="js/jeu.js"></script>
+<script src="js/affichage.js"></script>
+
+</body>
+</html>

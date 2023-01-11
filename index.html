@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Quiz Médiamétrie</title>
+    <link href="img/favicon-mediametrie.png" rel="icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="css/output.css">
+
+</head>
+<body class="bg-background bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie">
+<!-- Logo du quiz -->
+<div class="grid place-items-center h-screen">
+    <img id="logoQuiz" class="m-auto md:w-86" alt="Quiz Médiamétrie" src="img/logo-quiz.svg">
+</div>
+
+<!-- Popup de première connexion page 1 -->
+<div id="premiereCo1" class="modal hidden">
+    <div class="modal-content w-4/5 md:w-2/5 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto pt-2.5">
+        <!-- Modal content -->
+        <div class="relative bg-white">
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <div class="md:text-lg leading-relaxed text-center">
+                    Teste ta culture générale et tente de gagner des cadeaux grâce au quiz de Médiamétrie.
+                </div>
+                <div class="leading-relaxed mx-auto">
+                    <img class="mx-auto md:w-72" src="img/lot-cadeaux.svg" alt="">
+                </div>
+                <div class="md:text-lg leading-relaxed text-center">
+                    Chaque question possède un niveau & un nombre de points. Plus tu trouves de bonnes réponses, plus tu gagnes de points !
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex justify-end space-x-2">
+                <a id="btnPremiereCo" class="px-5 py-5 hover:cursor-pointer">
+                    <img class="w-6" src="img/flèche-droite.svg" alt="suivant">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup de première connexion page 2 -->
+<div id="premiereCo2" class="modal hidden">
+    <div class="modal-content w-4/5 md:w-2/5 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto ">
+        <!-- Modal content -->
+        <div class="relative bg-white">
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <div class="md:text-lg leading-relaxed text-center">
+                    En participant au jeu, nous t'informons que Médiamétrie t'attribue un pseudo et un avatar aléatoires dès ta première connexion. Exemple :
+                </div>
+                <div class="leading-relaxed mx-auto">
+                    <img class="mx-auto md:w-44" src="img/exemple-avatar.svg" alt="">
+                </div>
+                <div class="md:text-lg leading-relaxed text-center text-red-500">
+                    En poursuivant ta navigation, nous t'informons que des données d’usage nécessaires au bon fonctionnement du jeu auquel tu participes sont collectées.                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex justify-end space-x-2">
+                <a href="accueil.html" class="px-5 py-5 hover:cursor-pointer text-bleu font-black text-xl">
+                    C'est parti
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="js/affichage.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Quiz Médiamétrie</title>
+    <link href="img/favicon-mediametrie.png" rel="icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css"/>
+    <link rel="stylesheet" href="css/output.css">
+
+</head>
+<body class="bg-background bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie">
+
+<!-- Popup règles page 1 -->
+<div id="regles1" class="modal">
+    <div class="modal-content w-4/5 md:w-2/5 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto pt-2.5">
+        <!-- Modal content -->
+        <div class="relative bg-white">
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <div class="md:text-lg leading-relaxed text-center">
+                    Pour jouer, c’est simple ! Swipe ou clique à droite si tu penses que la réponse est vraie.
+                </div>
+                <div class="leading-relaxed mx-auto py-2.5">
+                    <img class="mx-auto md:w-36" src="img/check.svg" alt="">
+                </div>
+                <div class="md:text-lg leading-relaxed text-center">
+                    Swipe ou clique à gauche si tu penses que la réponse est fausse.
+                </div>
+                <div class="leading-relaxed mx-auto py-2.5">
+                    <img class="mx-auto md:w-36" src="img/croix.svg" alt="">
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex justify-end space-x-2 p-5">
+                <img id="goRegle2" class="w-6 cursor-pointer" src="img/flèche-droite.svg" alt="suivant">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup règles page 2 -->
+<div id="regles2" class="modal hidden">
+    <div class="modal-content w-4/5 md:w-2/5 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto ">
+        <!-- Modal content -->
+        <div class="relative bg-white">
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <div class="md:text-lg leading-relaxed text-center">
+                    Chaque question possède une thématique, un niveau et un nombre de points. Plus tu trouves de bonnes réponses, plus tu gagnes de points !
+                </div>
+                <div class="leading-relaxed mx-auto py-5">
+                    <img class="mx-auto w-24" src="img/+3.svg" alt="">
+                </div>
+                <div class="md:text-lg leading-relaxed text-center">
+                    Attention ! Si tu reviens en arrière ou quittes la partie en cours de jeu, tu ne gagneras aucun point pour cette journée.                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex justify-between space-x-2 p-5">
+                <img id="goRegle1" class="w-6 cursor-pointer" src="img/flèche-gauche.svg" alt="suivant">
+                <img id="goRegle3" class="w-6 cursor-pointer" src="img/flèche-droite.svg" alt="suivant">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup règles page 3 -->
+<div id="regles3" class="modal hidden">
+    <div class="modal-content w-4/5 md:w-2/5 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto ">
+        <!-- Modal content -->
+        <div class="relative bg-white">
+            <!-- Modal body -->
+            <div class="p-6 space-y-6">
+                <div class="md:text-lg leading-relaxed text-center">
+                    A la fin de chaque partie, découvre ton score et le classement général.
+                </div>
+                <div class="md:text-lg leading-relaxed text-center">
+                    <b class="underline">Bonus :</b><br>
+                    Si tu te connectes quotidiennement au jeu, tu gagnes chaque jour 1 point bonus de participation !
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="flex justify-between space-x-2 p-5">
+                <img id="goRegle2bis" class="w-6 cursor-pointer" src="img/flèche-gauche.svg" alt="suivant">
+                <span>
+                    <a href="timer.html" class="px-5 py-5 hover:cursor-pointer text-bleu font-black text-xl">C'est parti</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- JavaScript -->
+<script src="js/affichage.js"></script>
+</body>
+</html>
