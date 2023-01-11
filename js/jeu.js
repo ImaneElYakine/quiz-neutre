@@ -147,18 +147,18 @@ function runTimer() {
 
 // Affichage de la réponse à la question
 function reponseFausseAffichage(){
-    document.getElementById("reponse_fausse").style.visibility = "visible";
+    document.getElementById("reponse_fausse").style.display = "block";
     setTimeout(function (){
-        document.getElementById("reponse_fausse").style.visibility = "hidden";
+        document.getElementById("reponse_fausse").style.display = "none";
     }, 1500);
 }
 
 function reponseBonneAffichage(){
     // On montre
-    document.getElementById("reponse_bonne").style.visibility = "visible";
+    document.getElementById("reponse_bonne").style.display = "block";
     setTimeout(function (){
         // On cache
-        document.getElementById("reponse_bonne").style.visibility = "hidden";
+        document.getElementById("reponse_bonne").style.display = "none";
     }, 1500);
 }
 
