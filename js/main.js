@@ -11,6 +11,7 @@ questions.forEach(setupDragAndDrop);
 
 function setupDragAndDrop(question) {
   const hammertime = new Hammer(question);
+  hammertime.get('swipe').set({ velocity: 0.6});
 
   // Dès que l'utilisateur saisit une carte
   hammertime.on('swipe', function (e) {
