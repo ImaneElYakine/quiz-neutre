@@ -176,7 +176,8 @@ function affichageFinJeu() {
         document.getElementById("reponse_fausse").style.display = "none";
         document.getElementById("reponse_bonne").style.display = "none";
         document.getElementById("recapitulatif").classList.remove("hidden");
-        document.getElementById("score_final").innerHTML = "Ton score est de : " + pointsTotal + " points"
+        document.getElementById("score_final").innerHTML = "Ton score est de : " + pointsTotal + " points";
+        document.body.style.overflow = "hidden";
             }, 1500);
 }
 

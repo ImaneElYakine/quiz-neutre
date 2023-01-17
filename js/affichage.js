@@ -35,6 +35,7 @@ const classement = document.getElementById("classement");
 const closeClassement = document.getElementById("closeClassement");
 
 if(document.getElementById("pictoBonus")) {
+    document.body.style.overflow = "auto";
     setTimeout(function () {
         document.getElementById("pictoBonus").classList.remove('animate-bounce');
     }, 6000);
