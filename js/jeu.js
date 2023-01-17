@@ -152,7 +152,9 @@ function runTimer() {
 function reponseFausseAffichage(){
     document.getElementById("reponse_fausse").style.display = "block";
     document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "none";
     setTimeout(function (){
+        document.body.style.pointerEvents = "auto";
         document.getElementById("reponse_fausse").style.display = "none";
         document.body.style.overflow = "visible";
     }, 1500);
@@ -162,8 +164,10 @@ function reponseBonneAffichage(){
     // On montre
     document.getElementById("reponse_bonne").style.display = "block";
     document.body.style.overflow = "hidden";
+    document.body.style.pointerEvents = "none";
     setTimeout(function (){
         // On cache
+        document.body.style.pointerEvents = "auto";
         document.getElementById("reponse_bonne").style.display = "none";
         document.body.style.overflow = "visible";
     }, 1500);
