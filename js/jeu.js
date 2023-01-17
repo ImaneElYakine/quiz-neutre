@@ -64,12 +64,15 @@ for (let i = 0; i < questionsDescription.length ; i++) {
 // LANCEMENT DU JEU
 runTimer();
 
+let dot = 1;
 // PASSAGE A LA QUESTION SUIVANTE
 function questionSuivante() {
     currentQuestion--;
     if (currentQuestion < 0) {
         affichageFinJeu();
     } else {
+        document.getElementById("dot" + (dot)).classList.add("active");
+        dot++;
         setTimeout(function (){
             // On révèle la nouvelle question
             cartes[currentQuestion].lastElementChild.classList.remove('blur');
@@ -148,25 +151,33 @@ function runTimer() {
 // Affichage de la réponse à la question
 function reponseFausseAffichage(){
     document.getElementById("reponse_fausse").style.display = "block";
+    document.body.style.overflow = "hidden";
     setTimeout(function (){
         document.getElementById("reponse_fausse").style.display = "none";
+        document.body.style.overflow = "visible";
     }, 1500);
 }
 
 function reponseBonneAffichage(){
     // On montre
     document.getElementById("reponse_bonne").style.display = "block";
+    document.body.style.overflow = "hidden";
     setTimeout(function (){
         // On cache
         document.getElementById("reponse_bonne").style.display = "none";
+        document.body.style.overflow = "visible";
     }, 1500);
 }
 
 // Affichage lors de la fin du jeu
 function affichageFinJeu() {
     setTimeout(function () {
-        window.location.replace('./accueil.html');
-    }, 1500);
+        document.getElementById("progress").style.display = "none";
+        document.getElementById("reponse_fausse").style.display = "none";
+        document.getElementById("reponse_bonne").style.display = "none";
+        document.getElementById("recapitulatif").classList.remove("hidden");
+        document.getElementById("score_final").innerHTML = "Ton score est de : " + pointsTotal + " points"
+            }, 1500);
 }
 
 // VIA LES BOUTONS
@@ -177,4 +188,3 @@ function choixBouton(choix) {
     choixUtilisateur = true;
     verificationReponse(choix);
 }
-

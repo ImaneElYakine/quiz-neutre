@@ -44,12 +44,14 @@ if(document.getElementById("pictoBonus")) {
 if(pictoCadeau) {
     pictoCadeau.addEventListener("click", function () {
         cadeaux.style.display = "block";
+        document.body.style.overflow = "hidden";
     });
 }
 
 if(closeCadeaux) {
     closeCadeaux.addEventListener("click", function () {
         cadeaux.style.display = "none";
+        document.body.style.overflow = "visible";
     });
 }
 
@@ -57,12 +59,14 @@ if(closeCadeaux) {
 if(pictoInfo) {
     pictoInfo.addEventListener("click", function () {
         informations.style.display = "block";
+        document.body.style.overflow = "hidden";
     });
 }
 
 if(closeInfo) {
     closeInfo.addEventListener("click", function () {
         informations.style.display = "none";
+        document.body.style.overflow = "auto";
     });
 }
 
@@ -83,12 +87,14 @@ if(closeBonus) {
 if(btnClassement) {
     btnClassement.addEventListener("click", function () {
         classement.style.display = "block";
+        document.body.style.overflow = "hidden";
     });
 }
 
 if(closeClassement) {
     closeClassement.addEventListener("click", function () {
         classement.style.display = "none";
+        document.body.style.overflow = "visible";
     });
 }
 

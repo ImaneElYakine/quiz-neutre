@@ -13,7 +13,7 @@ function setupDragAndDrop(question) {
   const hammertime = new Hammer(question);
 
   // Dès que l'utilisateur saisit une carte
-  hammertime.on('pan', function (e) {
+  hammertime.on('swipe', function (e) {
     question.classList.remove('profile--back');
     let posX = e.deltaX;
     let posY = Math.max(0, Math.abs(posX * smooth) - 42);
