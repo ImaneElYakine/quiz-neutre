@@ -51,6 +51,9 @@ let timer;
 
 // Son du quiz
 const son_jeu = new Audio('son/quiz.mp3')
+const son_faux = new Audio("son/faux.mp3");
+const son_vrai = new Audio("son/correct.mp3");
+
 
 
 // Affichage des questions sur les cartes
@@ -77,7 +80,6 @@ function questionSuivante() {
             // On révèle la nouvelle question
             cartes[currentQuestion].lastElementChild.classList.remove('blur');
         }, 1500);
-
     }
 }
 
@@ -125,6 +127,8 @@ function choix(choix) {
 
 // ARRET DU TIMER
 function stopTimer() {
+    son_jeu.pause();
+    son_jeu.currentTime = 0;
     clearTimeout(timer);
     document.getElementById("progress_bar").style.animation = 'none';
     document.getElementById("progress_bar").offsetHeight;
@@ -139,6 +143,8 @@ function runTimer() {
     document.getElementById("progress_bar").style.animation = null;
     document.getElementById("progress_bar").style.animation = "progress 6s linear";
     timer = window.setTimeout(function () {
+        son_jeu.pause();
+        son_jeu.currentTime = 0;
         reponseFausseAffichage();
         cartes[currentQuestion].classList.add('disapear');
         cartes[currentQuestion].style.display = "none";
@@ -150,6 +156,7 @@ function runTimer() {
 
 // Affichage de la réponse à la question
 function reponseFausseAffichage(){
+    son_faux.play();
     document.getElementById("reponse_fausse").style.display = "block";
     document.body.style.overflow = "hidden";
     document.body.style.pointerEvents = "none";
@@ -161,6 +168,8 @@ function reponseFausseAffichage(){
 }
 
 function reponseBonneAffichage(){
+    son_jeu.currentTime = 0;
+    son_vrai.play();
     // On montre
     document.getElementById("reponse_bonne").style.display = "block";
     document.body.style.overflow = "hidden";
@@ -175,6 +184,8 @@ function reponseBonneAffichage(){
 
 // Affichage lors de la fin du jeu
 function affichageFinJeu() {
+    son_jeu.volume = 0;
+    son_faux.volume = 0;
     setTimeout(function () {
         document.getElementById("progress").style.display = "none";
         document.getElementById("reponse_fausse").style.display = "none";

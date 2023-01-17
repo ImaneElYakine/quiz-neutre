@@ -33,6 +33,9 @@ const closeBonus = document.getElementById("closeBonus");
 const btnClassement = document.getElementById("btnClassement");
 const classement = document.getElementById("classement");
 const closeClassement = document.getElementById("closeClassement");
+const closeDejaJoue = document.getElementById("closeDejaJoue");
+const son_fond = new Audio('son/plage.mp3');
+son_fond.loop = true;
 
 if(document.getElementById("pictoBonus")) {
     document.body.style.overflow = "auto";
@@ -71,6 +74,7 @@ if(closeInfo) {
     });
 }
 
+
 // Gestion de la popup bonus
 if(pictoBonus) {
     pictoBonus.addEventListener("click", function () {
@@ -95,6 +99,14 @@ if(btnClassement) {
 if(closeClassement) {
     closeClassement.addEventListener("click", function () {
         classement.style.display = "none";
+        document.body.style.overflow = "visible";
+    });
+}
+
+// Gestion de la déjà joué
+if(closeDejaJoue) {
+    closeDejaJoue.addEventListener("click", function () {
+        document.getElementById("deja-joue").style.display = "none";
         document.body.style.overflow = "visible";
     });
 }
@@ -135,6 +147,18 @@ if(document.getElementById("goRegle3")){
 
 if(document.getElementById("goRegle2bis")){
     document.getElementById("goRegle2bis").onclick = goRegle2;
+}
+
+// Son de fond
+function sonFond(){
+    if (son_fond.paused === true) {
+        document.getElementById("picto_son").src = "img/picto-audio.svg";
+        son_fond.play();
+    }
+    else if (son_fond.paused === false){
+        document.getElementById("picto_son").src = "img/picto-audio-muet.svg";
+        son_fond.pause();
+    }
 }
 
 
