@@ -2,6 +2,13 @@
 module.exports = {
     content: ['index.html', 'accueil.html', 'quiz.html'],
     theme: {
+        screens: {
+            'sm': '640px',
+            'md': '768px',
+            'lg': '1280px',
+            'xl': '1536px',
+            '2xl': '2000px',
+        },
         extend: {
             colors: {
                 'bleu' : '#0032FF',
@@ -14,7 +21,7 @@ module.exports = {
                 'mediametrie': ['Mediametrie', 'sans-serif'],
             },
             backgroundImage: {
-                'background': "url('background.svg')",
+                'background': "url('/img/background.svg')",
             },
             keyframes: {
                 slide: {
