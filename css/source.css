@@ -24,14 +24,11 @@
 }
 
 .progress {
-    left: 50%;
-    top: 15%;
-    transform: translate(-50%, -15%);
-    position: absolute;
-    width: 50vw;
-    height: 3vh;
+    width: 400px;
+    height: 2.5vh;
     overflow: hidden;
     background: white;
+    margin-bottom: 20px;
 }
 
 .bar {
@@ -42,15 +39,24 @@
     background: #0032FF;
 }
 
-#cartes {
-    width: 50vw;
-    height: 40vh;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    text-align: center;
+@media only screen and (max-width : 500px) {
+    .progress {
+        width: 250px;
+    }
+
+    .questions {
+        width: 250px;
+        height: 350px;
+    }
+
+    .question {
+        width: 250px;
+    }
+
+    .question__encart {
+        width: 250px;
+        height: 350px;
+    }
 }
 
 .swiper-slide {
@@ -62,37 +68,24 @@
     justify-content: center;
 }
 
-#question {
-    position: absolute;
-    top: 35%;
-}
-
 #info_question {
     font-weight: bold;
     text-decoration: underline;
     margin-top: 5vh;
 }
 
-#positionnement {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translate(-50%, -20%);
-    z-index: 9999;
-}
-
 .dot {
-    height: 2vh;
-    width: 2vh;
-    background-color: #bbb;
-    border-radius: 50%;
+    height: 15px;
+    width: 15px;
     display: inline-block;
-    margin-left: 2vw;
-    margin-right: 2vw;
+    background-color: white;
+    border-radius: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .active {
-    background-color: #FFD700;
+    background-color: #0032FF;
 }
 
 #choix_reponse {
@@ -140,7 +133,8 @@
     z-index: 999;
 }
 
-/* Affichage mobile */
-@media only screen and (max-width : 320px) {
-
+.hauteur {
+    height: 50vh;
+    max-height: 50vh;
 }
+

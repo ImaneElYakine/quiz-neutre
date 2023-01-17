@@ -12,27 +12,21 @@ body {
   height:100vh;
   display: flex;
   justify-content: center;
-  overflow: hidden;
   align-items: center;
 }
 
-main {
-  width: 300px;
-  max-width: 90%;
-}
-
 .questions {
-  width:100%;
   position: relative;
   height:450px;
-  background-color: rgba(0, 0, 0, 0.24);
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.10);
 }
 
 .question {
   position: absolute;
   left:0px;
   top:0px;
-  width:100%;
+  width: 400px;
   overflow: hidden;
   cursor:pointer;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -47,6 +41,7 @@ main {
 .question__encart {
   height: 450px;
   background-color: white;
+  width: 400px;
 }
 
 .question__infos {
@@ -114,3 +109,4 @@ main {
   color: transparent;
   text-shadow: 0 0 8px #000;
 }
+
