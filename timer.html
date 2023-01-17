@@ -21,15 +21,21 @@
 </div>
 
 <script>
+    const son_timer = new Audio("son/timer.mp3");
+    const son_go = new Audio("son/go.mp3");
+    son_timer.play();
     setTimeout(function (){
         document.getElementById("compte_rebours_3").classList.add("hidden");
         document.getElementById("compte_rebours_2").classList.remove("hidden");
+        son_timer.play();
         setTimeout(function (){
             document.getElementById("compte_rebours_2").classList.add("hidden");
             document.getElementById("compte_rebours_1").classList.remove("hidden");
+            son_timer.play();
             setTimeout(function (){
                 document.getElementById("compte_rebours_1").classList.add("hidden");
                 document.getElementById("compte_rebours_go").classList.remove("hidden");
+                son_go.play();
                 setTimeout(function (){
                     document.getElementById("compte_rebours_go").classList.add("hidden");
                     window.location.href = 'quiz.html';
