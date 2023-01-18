@@ -34,7 +34,7 @@ const btnClassement = document.getElementById("btnClassement");
 const classement = document.getElementById("classement");
 const closeClassement = document.getElementById("closeClassement");
 const closeDejaJoue = document.getElementById("closeDejaJoue");
-const son_fond = new Audio('son/plage.mp3');
+const son_fond = new Audio('son/fond.mp3');
 son_fond.loop = true;
 
 if(document.getElementById("pictoBonus")) {
