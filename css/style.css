@@ -53,6 +53,8 @@
   transform: translate(-50%, -50%);
   color: black;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .question__theme {

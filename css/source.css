@@ -78,14 +78,14 @@
     height: 15px;
     width: 15px;
     display: inline-block;
-    background-color: white;
+    background-color: #9d9d9d;
     border-radius: 50%;
     margin-left: 15px;
     margin-right: 15px;
 }
 
 .active {
-    background-color: #0032FF;
+    background-color: white;
 }
 
 #choix_reponse {
