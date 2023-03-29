@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ['index.html', 'accueil.html', 'quiz.html'],
+    content: ['index.html', 'accueil.html', 'quiz.html', 'timer.html', 'règles.html'],
     theme: {
         screens: {
+            'xs' : '450px',
             'sm': '640px',
             'md': '768px',
             'lg': '1280px',
