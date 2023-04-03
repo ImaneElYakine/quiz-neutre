@@ -1,46 +1,38 @@
 // Question en cours
-let currentQuestion = 4;
+let currentQuestion = 2;
 
 // Nb de points
 let pointsTotal = 0;
 
 // Le total des questions
-const totalQuestion = 5;
+const totalQuestion = 3;
 
 // Tableau des questions
 const questionsDescription = [
     "La marque Audimat, de Médiamétrie, est devenu un mot du langage courant",
     "Ninho est le rappeur qui a vendu le plus d'album en 2021",
     "La VR signifie Virtual Reality soit Réalité Virtuelle",
-    "Le site de E-Commerce le plus visité par les français est CDiscount",
-    "Le seuil des 2 millions d'entrées est franchi pour le film The Batman"
 ];
 
 // Tableau des thèmes des questions
 const themes = [
     "Médiamétrie",
     "Musique",
-    "High Tech",
-    "E-Commerce",
-    "Cinéma"
+    "test"
 ];
 
 // Tableau des réponses aux questions
 const reponses = [
     true,
     true,
-    false,
-    true,
-    false,
+    false
 ];
 
 // Tableau des points accordés à chaque question
 const points = [
     1,
     2,
-    3,
-    4,
-    5,
+    3
 ];
 
 // Si le joueur à donné une réponse
@@ -59,8 +51,11 @@ const son_vrai = new Audio("son/correct.mp3");
 // Affichage des questions sur les cartes
 let cartes = document.querySelectorAll('.question');
 for (let i = 0; i < questionsDescription.length ; i++) {
+    console.log(i);
     cartes[i].lastElementChild.firstElementChild.innerHTML = themes[i];
+    console.log(themes[i]);
     cartes[i].lastElementChild.lastElementChild.innerHTML = questionsDescription[i];
+    console.log(questionsDescription[i]);
 }
 
 
@@ -193,7 +188,7 @@ function affichageFinJeu() {
         document.getElementById("recapitulatif").classList.remove("hidden");
         document.getElementById("score_final").innerHTML = "Ton score est de : " + pointsTotal + " points";
         document.body.style.overflow = "hidden";
-            }, 1500);
+    }, 1500);
 }
 
 // VIA LES BOUTONS
