@@ -1300,6 +1300,14 @@ video {
 }
 
 @media (max-height: 620px) {
+  .small\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .small\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .small\:hidden {
     display: none;
   }
