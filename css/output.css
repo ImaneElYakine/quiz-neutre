@@ -1299,6 +1299,24 @@ video {
   }
 }
 
+@media (max-height: 620px) {
+  .small\:hidden {
+    display: none;
+  }
+
+  .small\:w-4 {
+    width: 1rem;
+  }
+
+  .small\:w-7 {
+    width: 1.75rem;
+  }
+
+  .small\:w-8 {
+    width: 2rem;
+  }
+}
+
 @media (min-width: 450px) {
   .xs\:hidden {
     display: none;
