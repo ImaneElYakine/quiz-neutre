@@ -59,6 +59,23 @@
     }
 }
 
+@media only screen and (max-height : 620px) {
+    .questions {
+        width: 250px;
+        height: 250px;
+    }
+
+    .question {
+        width: 250px;
+    }
+
+    .question__encart {
+        width: 250px;
+        height: 250px;
+    }
+
+}
+
 .swiper-slide {
     text-align: center;
     font-weight: bold;
