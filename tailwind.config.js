@@ -3,6 +3,7 @@ module.exports = {
     content: ['index.html', 'accueil.html', 'quiz.html', 'timer.html', 'règles.html'],
     theme: {
         screens: {
+            'small': { 'raw': '(max-height: 620px)' },
             'xs' : '450px',
             'sm': '640px',
             'md': '768px',

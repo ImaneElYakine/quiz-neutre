@@ -3,27 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Erreur</title>
+    <title>Jeu terminé</title>
     <link href="img/favicon-mediametrie.png" rel="icon"/>
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
     <link rel="stylesheet" href="css/output.css">
 
 </head>
-<body style="background-image: url('img/background.svg');" class="bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie">
-<img class="w-32 md:w-40 mx-auto" src="img/logo-mediametrie-blanc.png" alt="Logo Médiamétrie">
-<!-- Popup erreur -->
-<div id="cadeaux" class="modal">
-    <div class="modal-content w-3/6 h-3/6 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <!-- Modal content -->
-        <div class="relative bg-white">
-            <div class="p-6 space-y-6 text-base md:text-lg text-rouge text-center font-black">
-                <p>Ce jeu est terminé !</p>
-                <p>Merci pour votre participation !</p>
+<body class="bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie min-h-screen flex flex-col"
+      style="background-image: url('img/background.svg');"
+>
+<div class="flex-grow">
+    <img class="w-32 md:w-40 mx-auto" src="img/logo-mediametrie-blanc.png" alt="Logo Médiamétrie">
+    <!-- Popup erreur -->
+    <div id="cadeaux" class="modal">
+        <div class="modal-content w-3/6 h-3/6 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <!-- Modal content -->
+            <div class="relative bg-white">
+                <div class="p-6 space-y-6 text-base md:text-lg text-rouge text-center font-black">
+                    <p>Ce jeu est terminé !</p>
+                    <p>Merci pour votre participation !</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
+<!-- CGU/Mentions légales
+<footer class="mt-6 z-0">
+    <div class="w-full mx-auto container md:p-6 p-4 md:flex md:items-center md:justify-end">
+        <ul class="flex flex-wrap justify-end items-center mt-3 text-xs md:text-sm text-white opacity-80 sm:mt-0">
+            <li>
+                <span class="text-xs md:text-sm text-white sm:text-center mr-4">© 2023 <a class="hover:underline"
+                                                                                          href="https://www.mediametrie.fr/fr"
+                                                                                          target="_blank">Médiamétrie</a>
+                </span>
+            </li>
+            <li>
+                <span class="mr-4 hover:underline md:mr-6 hover:cursor-pointer" onclick="displayModal()">Cookies</span>
+            </li>
+            <li>
+                <a class="mr-4 hover:underline md:mr-6" href="#">Mentions légales</a>
+            </li>
+            <li>
+                <a class="mr-4 hover:underline md:mr-6" href="#">C.G.U</a>
+            </li>
+        </ul>
+    </div>
+</footer>
+-->
 </body>
 </html>

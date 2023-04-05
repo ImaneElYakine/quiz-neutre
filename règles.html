@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="css/output.css">
 
 </head>
-<body style="background-image: url('img/background.svg');" class="bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie">
-<img class="w-32 md:w-40 mx-auto" src="img/logo-mediametrie-blanc.png" alt="Logo Médiamétrie">
+<body class="bg-no-repeat bg-cover bg-center bg-fixed font-mediametrie min-h-screen flex flex-col"
+      style="background-image: url('img/background.svg');"
+><img class="w-32 md:w-40 mx-auto" src="img/logo-mediametrie-blanc.png" alt="Logo Médiamétrie">
 
+<div class="flex-grow"></div>
 <!-- Popup règles page 1 -->
 <div id="regles1" class="modal">
     <div class="modal-content w-4/5 md:w-2/5 absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 mx-auto pt-2.5">
@@ -91,8 +93,6 @@
         </div>
     </div>
 </div>
-
-
 
 <!-- JavaScript -->
 <script src="js/affichage.js"></script>
