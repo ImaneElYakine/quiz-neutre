@@ -39,6 +39,9 @@ module.exports = {
                 'slide-left': 'slide 1.5s linear',
                 'appear': 'appear 1.5s linear',
             },
+            fontSize: {
+                'xxs': '0.625rem'
+            }
         },
     },
     plugins: [],
