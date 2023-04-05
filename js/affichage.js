@@ -21,6 +21,23 @@ if(btnPremiereCo){
 }
 
 // accueil.html
+
+// Gestion de la popup Cookie
+const modal = document.getElementById("myModal");
+
+
+
+
+function displayModal() {
+    modal.style.display = "block";
+    document.body.style.overflow = 'hidden';
+}
+
+function hideModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = 'visible';
+}
+
 const pictoCadeau = document.getElementById("pictoCadeau");
 const cadeaux = document.getElementById("cadeaux");
 const closeCadeaux = document.getElementById("closeCadeaux");
